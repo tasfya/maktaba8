@@ -1,0 +1,24 @@
+uuid: 6c0c7b63-0ad7-461b-be0e-ebf82b20651e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.scholar.field_biography
+    - node.type.scholar
+  module:
+    - text
+    - user
+id: node.scholar.default
+targetEntityType: node
+bundle: scholar
+mode: default
+content:
+  field_biography:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 100
+hidden: {  }

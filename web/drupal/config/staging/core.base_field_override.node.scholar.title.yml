@@ -1,0 +1,18 @@
+uuid: 612a6fce-68fb-454b-aca5-105d76e4466d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.scholar
+id: node.scholar.title
+field_name: title
+entity_type: node
+bundle: scholar
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

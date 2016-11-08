@@ -1,0 +1,22 @@
+uuid: eb3a2112-7a38-4b31-bbad-ef54ace26225
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography
+    - node.type.scholar
+  module:
+    - text
+id: node.scholar.field_biography
+field_name: field_biography
+entity_type: node
+bundle: scholar
+label: Biography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

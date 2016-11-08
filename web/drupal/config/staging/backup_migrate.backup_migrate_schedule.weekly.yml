@@ -1,0 +1,13 @@
+uuid: f5aa4cf1-1ad6-4d47-9be5-26adb4ef5814
+langcode: en
+status: true
+dependencies: {  }
+id: weekly
+label: Weekly
+enabled: true
+keep: null
+period: 604800
+cron: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: null
