@@ -26,9 +26,8 @@ make sure to add this line on settings.php:
 - to export the configuration:
 ```docker exec -it drupal drush config-export staging```
 - to import the configuration:
-```bash
-git pull
-docker exec -it drupal drush config-export staging```
+```git pull
+docker exec -it drupal drush config-import staging```
 
 ## Useful commands
 Run drush commands: ```docker exec -it drupal drush status```
