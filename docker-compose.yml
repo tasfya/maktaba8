@@ -21,3 +21,14 @@ services:
       MYSQL_PASSWORD: drupal
     volumes:
       - ./mysql:/var/lib/mysql
+
+  mobile-app:
+    build: ./mobileapp
+    ports:
+      - "8100:8100"
+      - "35729:35729"
+    volumes: 
+      - ./mobileapp/ionic:/opt/maktaba
+    command: ionic serve -c --all   
+    container_name: ionic  
+    tty: true
