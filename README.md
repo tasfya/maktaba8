@@ -16,7 +16,7 @@ docker-compose up drupal-web
 ### Install the db
 ```
 docker exec -it maktaba8_mysql bash
-docker mysql -u drupal -pdrupal drupal < /var/lib/mysql drupal-initial-db.mysql
+mysql -u drupal -pdrupal drupal < /var/lib/mysql drupal-initial-db.mysql
 ```
 
 Visit http://localhost:8080
