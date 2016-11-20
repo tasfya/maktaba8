@@ -29,8 +29,7 @@ Visit http://localhost:8080
 - to export the configuration:
 ```docker exec -it maktaba8_drupal drush config-export staging```
 - to import the configuration:
-```
-docker exec -it drupal drush config-import staging```
+```docker exec -it drupal drush config-import staging```
 
 ## Useful commands
 Run drush commands: ```docker exec -it maktaba8_drupal drush status```
