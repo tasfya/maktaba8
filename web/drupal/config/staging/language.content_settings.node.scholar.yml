@@ -1,0 +1,11 @@
+uuid: c47034b1-1d36-4360-ba1b-25bb81e8ac14
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.scholar
+id: node.scholar
+target_entity_type_id: node
+target_bundle: scholar
+default_langcode: site_default
+language_alterable: true

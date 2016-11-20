@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.book.field_document
+    - field.field.node.book.field_scholar
     - node.type.book
   module:
     - user
@@ -14,4 +16,7 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_document: true
+  field_scholar: true
+  langcode: true

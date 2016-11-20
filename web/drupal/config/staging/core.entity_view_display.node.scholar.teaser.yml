@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.scholar.field_biography
     - node.type.scholar
   module:
     - user
@@ -14,4 +15,6 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_biography: true
+  langcode: true

@@ -10,7 +10,7 @@ services:
       - mysql-server:mysql
     volumes:
       - ./web/drupal:/var/www/html
-    container_name: drupal
+    container_name: maktaba8_drupal
 
   mysql-server:
     image: mysql
@@ -21,14 +21,15 @@ services:
       MYSQL_PASSWORD: drupal
     volumes:
       - ./mysql:/var/lib/mysql
+    container_name: maktaba8_mysql
 
   mobile-app:
     build: ./mobileapp
     ports:
       - "8100:8100"
       - "35729:35729"
-    volumes: 
+    volumes:
       - ./mobileapp/ionic:/opt/maktaba
-    command: ionic serve -c --all   
-    container_name: ionic  
+    command: ionic serve -c --all
+    container_name: ionic
     tty: true

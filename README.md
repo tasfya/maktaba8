@@ -4,30 +4,33 @@
 
   - docker-compose
 
-### Install guide:
+### Install guide Web Drupal:
 
 
 ```bash
 git clone https://github.com/tasfya/maktaba8.git
 cd maktaba8
 docker-compose build
-docker-compose up
+docker-compose up drupal-web
+```
+### Install the db
+```
+docker exec -it maktaba8_mysql bash
+docker mysql -u drupal -pdrupal drupal < /var/lib/mysql drupal-initial-db.mysql
 ```
 
-visit http://localhost:8080
+Visit http://localhost:8080
 
-make sure to add this line on settings.php:
-`$config_directories['staging'] = 'config/staging';`
 
 ### Directory structure:
 - web/config : contains Drupal CMI config files
 
 ### Development:
 - to export the configuration:
-```docker exec -it drupal drush config-export staging```
+```docker exec -it maktaba8_drupal drush config-export staging```
 - to import the configuration:
-```git pull
+```
 docker exec -it drupal drush config-import staging```
 
 ## Useful commands
-Run drush commands: ```docker exec -it drupal drush status```
+Run drush commands: ```docker exec -it maktaba8_drupal drush status```
