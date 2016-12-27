@@ -1,3 +1,2 @@
-/mysql/*
-!drupal-initial-db.mysql
+/mysql/db-data
 

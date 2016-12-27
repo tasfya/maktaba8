@@ -11,12 +11,7 @@
 git clone https://github.com/tasfya/maktaba8.git
 cd maktaba8
 docker-compose build
-docker-compose up drupal-web
-```
-### Install the db
-```
-docker exec -it maktaba8_mysql bash
-mysql -u drupal -pdrupal drupal < /var/lib/mysql drupal-initial-db.mysql
+docker-compose up
 ```
 
 Visit http://localhost:8080

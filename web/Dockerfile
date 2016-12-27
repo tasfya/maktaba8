@@ -34,7 +34,4 @@ RUN curl http://drupalconsole.com/installer -L -o drupal.phar
 RUN mv drupal.phar /usr/local/bin/drupal && chmod +x /usr/local/bin/drupal
 
 
-#Install composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
 WORKDIR /var/www/html
