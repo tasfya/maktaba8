@@ -4,7 +4,7 @@
 
   - docker-compose
 
-### Install guide Web Drupal:
+### Install:
 
 
 ```bash
@@ -14,7 +14,19 @@ docker-compose build
 docker-compose up
 ```
 
+Wait for the db setup and then clear drupal cache
+```
+docker-compose exec web drush cr
+```
 Visit http://localhost:8080
+
+
+####Admin User:
+
+username: admin
+
+password: password
+
 
 
 ### Directory structure:
@@ -22,9 +34,9 @@ Visit http://localhost:8080
 
 ### Development:
 - to export the configuration:
-```docker exec -it maktaba8_drupal drush config-export staging```
+```docker-compose exec web drush config-export staging```
 - to import the configuration:
-```docker exec -it drupal drush config-import staging```
+```docker-compose exec web drush config-import staging```
 
 ## Useful commands
-Run drush commands: ```docker exec -it maktaba8_drupal drush status```
+Run drush commands: ```docker-compose exec web drush status```

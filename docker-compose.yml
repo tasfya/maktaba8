@@ -1,6 +1,6 @@
 version: '2'
 services:
-  drupal-web:
+  web:
     build: ./web/
     ports:
       - "8080:80"
