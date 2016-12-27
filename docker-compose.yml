@@ -20,16 +20,7 @@ services:
       MYSQL_USER: drupal
       MYSQL_PASSWORD: drupal
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./mysql/db-data:/var/lib/mysql
+      - ./mysql:/docker-entrypoint-initdb.d
     container_name: maktaba8_mysql
 
-  mobile-app:
-    build: ./mobileapp
-    ports:
-      - "8100:8100"
-      - "35729:35729"
-    volumes:
-      - ./mobileapp/ionic:/opt/maktaba
-    command: ionic serve -c --all
-    container_name: ionic
-    tty: true
